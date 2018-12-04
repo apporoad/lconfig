@@ -12,9 +12,13 @@ npm i --save lconfig
 
 
 ## how to use in cli
+todo with micli
 ```bash
 npm i -g lconfig
 
+lc -h
+
+lc file
 lc yourConfigKey yourConfigValue
 lc [ls]
 lc 
