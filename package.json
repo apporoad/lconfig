@@ -1,0 +1,24 @@
+{
+  "name": "lconfig",
+  "version": "1.0.0",
+  "description": "easy use config help",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apporoad/lconfig.git"
+  },
+  "keywords": [
+    "config",
+    "level",
+    "layer"
+  ],
+  "author": "apporoad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apporoad/lconfig/issues"
+  },
+  "homepage": "https://github.com/apporoad/lconfig#readme"
+}
