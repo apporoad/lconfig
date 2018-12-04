@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/apporoad/lconfig/issues"
   },
-  "homepage": "https://github.com/apporoad/lconfig#readme"
+  "homepage": "https://github.com/apporoad/lconfig#readme",
+  "dependencies": {
+    "caller.js": "^1.0.0",
+    "stack-trace": "0.0.10"
+  }
 }
