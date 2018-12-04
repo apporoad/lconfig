@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/apporoad/lconfig#readme",
   "dependencies": {
-    "caller.js": "^1.0.1",
-    "stack-trace": "0.0.10"
+    "caller.js": "^1.0.2"
   }
 }
