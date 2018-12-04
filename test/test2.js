@@ -22,3 +22,10 @@ iPrint("F:/test/abc.js")
 
 // test package.json
 iPrint(__dirname + "/others/testPackage/test1/test2/abc.js")
+
+// test cache
+
+iPrint(__dirname + "/others/testPackage/test1/test2/abc.js")
+
+// print cache
+console.log(global.lconfigPathConfigMap)

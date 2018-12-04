@@ -7,16 +7,24 @@ global.lconfigPathConfigMap = global.lconfigPathConfigMap || {}
 var lpcm = global.lconfigPathConfigMap
 
 const MapGet = path =>{
-    return lpcm[path.replace("/","_").replace('\\',"_")]
+    var rk =  pathM.dirname(path).replace(/\//g,'_').replace(/\\/g,'_')  + "_key"
+    return lpcm[rk]
 }
 
 const MapSet =(path,configFiles) => {
     if(configFiles && configFiles.length > 0){
-        lpcm[path.replace("/","_").replace('\\',"_")] = configFiles
+        var rk =  pathM.dirname(path).replace(/\//g,'_').replace(/\\/g,'_')  + "_key"
+        lpcm[rk] = configFiles
     }
+    return configFiles
 }
 
 var iFindConfig= path=>{
+    //use cache
+    if(MapGet(path)){
+        //console.log("cache success")
+        return MapGet(path)
+    }
     if(!path) return null
     var dir = pathM.dirname(path)
     if(pathM.basename(dir) =="node_modules"){
@@ -55,6 +63,7 @@ exports.findConfig = path=>{
             4. ...
         ps: if the dir is node_moudles or find package.json stop recurse
      */
-    return iFindConfig(path)
+    //use cache
+    return MapSet(path,iFindConfig(path))
 }
 
